@@ -9,14 +9,14 @@ spec:
     matchLabels:
       app: vprodb
   replicas: 1
-  templates:
+  template:
     metadata:
       labels:
         app: vprodb
     spec:
       containers:
         - name: vprodb
-          images: sai8465/vprodb
+          image: sai8465/vprodb
           args:
             - "--ignore-db-dir=lost+found"
           volumeMounts:
